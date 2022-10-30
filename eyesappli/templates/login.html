@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>my form</title>
+        <style>
+            .form1{
+                background-color: aqua;
+                display: inline-block;
+                padding: 10px 40px;
+                
+            }
+            .container{
+                
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                padding-top:100px;
+    
+    
+            }
+            span{
+                color:blue;
+                text-decoration: underline;
+            }
+            button{
+                background-color: black;
+                color:white;
+                margin-top: 10px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            <form class="form1" method="POST">
+           {% csrf_token %}
+                <p>Register client</p>
+                <label for="username">UserName</label><br>
+                <input type="text" name="Username"><br>
+                <label for="email">Email</label><br>
+                <input type="text" name="Email"><br>
+                <label for="password">Password</label><br>
+                <input type="password" name="Password"><br>
+                <label for="re-password">Comfirm</label><br>
+                <input type="password" name="Comfirm"><br>
+                <button type="submit">Submit</button><br>
+                
+            </form>
+        </div>
+    </body>
+    
+</html>
